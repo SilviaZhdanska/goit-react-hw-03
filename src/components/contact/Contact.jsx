@@ -1,1 +1,10 @@
-export default function ContactList() {}
+import React from "react";
+
+export default function Contact({ contact, onDelete }) {
+  return (
+    <li>
+      {contact.name}: {contact.number}
+      <button onClick={() => onDelete(contact.id)}>Delete</button>
+    </li>
+  );
+}
